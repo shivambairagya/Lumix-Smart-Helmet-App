@@ -11,7 +11,7 @@ class WeatherPage extends StatefulWidget {
 }
 
 class _WeatherPageState extends State<WeatherPage> {
-  static const String apiKey = "5336132dedcd47cf80581928261204";
+  final String apiKey = dotenv.env['WEATHER_API_KEY']!;
 
   Map<String, dynamic>? weatherData;
   bool  isLoading     = true;

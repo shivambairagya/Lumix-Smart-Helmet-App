@@ -27,7 +27,7 @@ class _NavigationPageState extends State<NavigationPage> {
   final DatabaseReference _helmetRef =
   FirebaseDatabase.instance.ref('helmet/nav');
 
-  static const String googleApiKey = "AIzaSyCJIVcJzMRzBcEBqIXQzdHN0TKJ9N3hKb8";
+  final String googleApiKey = dotenv.env['GOOGLE_MAPS_API_KEY']!;
 
   LatLng? currentLocation;
   LatLng? destination;

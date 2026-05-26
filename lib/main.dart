@@ -1,21 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'login_page.dart';
 import 'home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Load .env file first
+  await dotenv.load(fileName: ".env");
+
   await Firebase.initializeApp(
-    options: const FirebaseOptions(
-      apiKey: "AIzaSyDHnAfHqn-_TH_VmW2ygpz7NsgNNWvc260",
-      appId: "1:539583338941:android:c2cde8aede935a7ec71ad4",
-      messagingSenderId: "539583338941",
-      projectId: "lumix-h1",
-      storageBucket: "lumix-h1.firebasestorage.app",
-      databaseURL: "https://lumix-h1-default-rtdb.asia-southeast1.firebasedatabase.app", // ✅ THIS was missing
+    options: FirebaseOptions(
+      apiKey: dotenv.env['FIREBASE_API_KEY']!,
+      appId: dotenv.env['FIREBASE_APP_ID']!,
+      messagingSenderId: dotenv.env['FIREBASE_MESSAGING_SENDER_ID']!,
+      projectId: dotenv.env['FIREBASE_PROJECT_ID']!,
+      storageBucket: dotenv.env['FIREBASE_STORAGE_BUCKET']!,
+      databaseURL: dotenv.env['FIREBASE_DATABASE_URL']!,
     ),
   );
+
   runApp(const MyApp());
 }
 

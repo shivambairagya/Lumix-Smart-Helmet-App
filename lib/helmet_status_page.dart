@@ -31,7 +31,7 @@ class _HelmetStatusPageState extends State<HelmetStatusPage>
   ).ref("helmet/crash_alert");
 
   // ── Cloud SMS Configuration (FIXED: Real API key) ─────────
-  static const String _fast2smsApiKey = "JV3Xvaed1bSz0roA2fGPgRqHQWZDhO8iExCpnM5tmBUTLy4cIjfEar8lPcvOuHe50VQbXwpUYxAZzT7n";
+  final String _fast2smsApiKey = dotenv.env['FAST2SMS_API_KEY']!;
 
   // ── Sensor state ───────────────────────────────────────────
   double acceleration       = 0.0;

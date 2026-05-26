@@ -39,7 +39,7 @@ class _CrashHistoryPageState extends State<CrashHistoryPage> {
   StreamSubscription<Position>? _phoneGpsStream;
 
   // ── Cloud SMS Configuration ───────────────────────────────
-  static const String _fast2smsApiKey = "JV3Xvaed1bSz0roA2fGPgRqHQWZDhO8iExCpnM5tmBUTLy4cIjfEar8lPcvOuHe50VQbXwpUYxAZzT7n";
+  final String _fast2smsApiKey = dotenv.env['FAST2SMS_API_KEY']!;
 
   @override
   void initState() {
