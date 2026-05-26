@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "539583338941",
+    "firebase_url": "https://lumix-h1-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "lumix-h1",
+    "storage_bucket": "lumix-h1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539583338941:android:c2cde8aede935a7ec71ad4",
+        "android_client_info": {
+          "package_name": "com.example.lumix_h1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHnAfHqn-_TH_VmW2ygpz7NsgNNWvc260"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
